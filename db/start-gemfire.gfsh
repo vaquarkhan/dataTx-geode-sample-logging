@@ -1,0 +1,11 @@
+start locator --name=locator1 \
+              --J=-Dlog4j.configurationFile=./log4j2.xml
+
+
+start server --name=server1 \
+             --server-port=0 \
+             --J=-Dlog4j.configurationFile=./log4j2.xml
+
+create region --name=test \
+              --type=REPLICATE \
+              --skip-if-exists
